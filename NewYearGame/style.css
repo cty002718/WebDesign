@@ -1,0 +1,51 @@
+body {
+    font-size: 20;
+    padding: 10px 0px 0px 10px;
+    line-height: 45px;
+    
+}
+
+input[type=submit] {
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+input[type=text] {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+.error {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.suc {
+    font-weight: bold;
+    color: #0000FF;
+}
+
+table {
+    font-size: 100%;
+    border: 50px;
+}
+
+
+td {
+    padding: 5px 30px 5px 0px;
+}
+
+span.w {
+    color: rgb(117, 169, 255);
+}
+
+span.sum {
+    color: rgb(227, 33, 52);
+}
+
+
