@@ -1,5 +1,5 @@
 body {
-    font-size: 20;
+    font-size: 25px;
     padding: 10px 0px 0px 10px;
     line-height: 45px;
     
@@ -40,12 +40,17 @@ td {
     padding: 5px 30px 5px 0px;
 }
 
-span.w {
-    color: rgb(117, 169, 255);
+span.game {
+    color: rgb(0, 225, 3);
 }
 
-span.sum {
+span.lose {
     color: rgb(227, 33, 52);
 }
+
+span.win {
+    color: rgb(0, 182, 3)
+}
+
 
 

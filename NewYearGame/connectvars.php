@@ -1,6 +1,6 @@
 <?php
-	define('DB_HOST','localhost');
-	define('DB_USER','id816606_root');
+	define('DB_HOST','127.0.0.1');
+	define('DB_USER','root');
 	define('DB_PASSWORD','12345678');
-	define('DB_NAME','id816606_university');
+	define('DB_NAME','NewYearGame');
 ?>

@@ -62,8 +62,8 @@
 		echo '<p><strong>'. $aname .': </strong>' . $anum . '<br /><strong>'. $bname .': </strong>' . $bnum .
 			'<br /><strong>'. $cname . ': </strong>' . $cnum . '<br /><strong>'. $dname. ': </strong>' . $dnum .'</p>';
 		echo '<form method="post" action="removedata.php">';
-		echo '<input type="radio" name="confirm" value="Yes" /> &#26159; ';
-		echo '<input type="radio" name="confirm" value="No" checked="checked" /> &#21542; <br />';
+		echo '<input type="radio" name="confirm" value="Yes" checked="checked" /> &#26159; ';
+		echo '<input type="radio" name="confirm" value="No" /> &#21542; <br />';
 		echo '<input type="submit" value="&#36865;&#20986;" name="submit" />';
 
 		echo '<input type="hidden" name="id" value="' . $id . '" />';

@@ -63,32 +63,56 @@
             echo "<td>$bname</td>";
             echo "<td>$cname</td>";
             echo "<td>$dname</td></tr>";
-            echo "<tr><td><span class = \"w\">勝場</span></td>";
-            echo "<td><span class = \"w\">$awin</span></td>";
-            echo "<td><span class = \"w\">$bwin</span></td>";
-            echo "<td><span class = \"w\">$cwin</span></td>";
-            echo "<td><span class = \"w\">$dwin</span></td></tr>";
-            echo "<tr><td><span class = \"sum\">總和</span></td>";
-            echo "<td><span class = \"sum\">$asum</span></td>";
-            echo "<td><span class = \"sum\">$bsum</span></td>";
-            echo "<td><span class = \"sum\">$csum</span></td>";
-            echo "<td><span class = \"sum\">$dsum</span></td></tr>";
+            echo "<tr><td>總和</td>";
+            if($asum >= 0) {
+                echo "<td><span class = \"win\">$asum</span></td>";
+            } else {
+                echo "<td><span class = \"lose\">$asum</span></td>";
+            }
+            if($bsum >= 0) {
+                echo "<td><span class = \"win\">$bsum</span></td>";
+            } else {
+                echo "<td><span class = \"lose\">$bsum</span></td>";
+            }
+            if($csum >= 0) {
+                echo "<td><span class = \"win\">$csum</span></td>";
+            } else {
+                echo "<td><span class = \"lose\">$csum</span></td>";
+            }
+            if($dsum >= 0) {
+                echo "<td><span class = \"win\">$dsum</span></td>";
+            } else {
+                echo "<td><span class = \"lose\">$dsum</span></td>";
+            }
+            echo "</tr>";
         }
         
-		echo '<tr><td>' . $i . '.</td>';
-        echo '<td>' . $row['anum'] . '</td>';
-		echo '<td>' . $row['bnum'] . '</td>';
-		echo '<td>' . $row['cnum'] . '</td>';
-        echo '<td>' . $row['dnum'] . '</td>';
+        echo '<tr><td>' . $i . '.</td>';
+        
+        if($row['anum'] > 0) {
+            echo '<td><span class= "game">' . $row['anum'] . '</span></td>';
+        } else {
+            echo '<td>' . $row['anum'] . '</td>';
+        }
+        if($row['bnum'] > 0) {
+            echo '<td><span class= "game">' . $row['bnum'] . '</span></td>';
+        } else {
+            echo '<td>' . $row['bnum'] . '</td>';
+        }
+        if($row['cnum'] > 0) {
+            echo '<td><span class= "game">' . $row['cnum'] . '</span></td>';
+        } else {
+            echo '<td>' . $row['cnum'] . '</td>';
+        }
+        if($row['dnum'] > 0) {
+            echo '<td><span class= "game">' . $row['dnum'] . '</span></td>';
+        } else {
+            echo '<td>' . $row['dnum'] . '</td>';
+        }
         echo '<td><a href="removedata.php?id='. $row['id'] . '&amp;anum=' . $row['anum'] .
         '&amp;bnum=' . $row['bnum'] . '&amp;cnum=' . $row['cnum'] .
         '&amp;dnum=' . $row['dnum'] . '&amp;aname=' . $aname . '&amp;bname=' . $bname .
         '&amp;cname=' . $cname . '&amp;dname=' . $dname . '">刪除</a>';
-        echo '</td>';
-        echo '<td><a href="updatedata.php?id='. $row['id'] . '&amp;anum=' . $row['anum'] .
-        '&amp;bnum=' . $row['bnum'] . '&amp;cnum=' . $row['cnum'] .
-        '&amp;dnum=' . $row['dnum'] . '&amp;aname=' . $aname . '&amp;bname=' . $bname .
-        '&amp;cname=' . $cname . '&amp;dname=' . $dname . '">更新</a>';
         echo '</td></tr>';
         $j = $j + 1;
         $i = $i - 1;
